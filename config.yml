@@ -1,0 +1,32 @@
+####################################
+#              MCUtil              #
+#   A towny plugin for minecraft   #
+####################################
+#              COLORS              #
+# &0 black         &1 dark_blue    #
+# &2 dark_green    &3 dark_aqua    #
+# &4 dark_red      &5 dark_purple  #
+# &6 gold          &7 gray         #
+# &8 dark_gray     &9 blue         #
+# &a green         &b aqua         #
+# &c red           &d light_purple #
+# &e yellow        &f white        #
+# &k obfuscated    &l bold         #
+# &m strikethrough &n underline    #
+# &o italic        &r reset        #
+####################################
+
+text:
+    uses: "&cUses: \"{$command}\""
+    error:
+        # used when player command is used by console
+        unable_with_console: "&c\"/{$command}\" can't be executed on console!"
+        # used when calling unkown or not-ever-joined player
+        unknown_player: "&c\"{$player}\" haven't ever joined!" 
+        # used when command got unknown argument or option
+        unknown_option: "&c\"{$option}\" isn't {$type}!"
+        # used when wrong integer is given; like "seventy seven" instead of 77
+        wrong_integer_format: "&c\"{$wrong_integer}\" isn't integer!"
+        has_no_permission: "&cYou has no \"{$permission}\" permission"
+        not_enough_inven: "&cYou doesn't enough inventory!"
+setting:

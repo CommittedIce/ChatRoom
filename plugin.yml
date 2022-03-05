@@ -1,0 +1,10 @@
+main : com.ice.croom.plugin.Plugin
+name : ChatRoom
+version : alpha-0.1
+author : clip
+description : "A plugin for Minecraft towny"
+api-version : 1.17
+commands:
+    croom:
+        description: "listen, say on, modify rooms"
+        usage: "/croom [options ..]"

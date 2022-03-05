@@ -21,6 +21,6 @@ ChatRoom
 
 ## Licence
 | Licence | case |
-| :------: | :------: |
+| :------ | :------ |
 | <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">크리에이티브 커먼즈 저작자표시-변경금지 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다. | 코드를 변경하지 않고 플러그인을 사용할 경우 |
 | <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다. | 코드를 인용해 재배포 또는 플러그인을 사용할 경우 |

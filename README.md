@@ -11,3 +11,4 @@ __double underscores__
 
 ~~cancelline~~  
 
+Copyright 2021 CommittedIce. All scripts cannot be copied without permission.

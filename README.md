@@ -22,9 +22,9 @@ ChatRoom
 # Last Updates
 | date | version | update |
 | :----- | :----- | :----- |
-| 2022-3-5 | alpha 0.1 | project started |
+| 2022-3-5 | alpha 1.0 | project started |
 | | | /croom: creating, managing, listening and saying on such room |
-| 2022-3-6 | alpha 0.2 | joining, leaving message added |
+| 2022-3-6 | alpha 1.1 | joining, leaving message added |
 
 # License
 | License | case |

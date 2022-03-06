@@ -1,6 +1,6 @@
 main : com.ice.croom.plugin.Plugin
 name : ChatRoom
-version : alpha-0.1
+version : alpha-0.2
 author : clip
 description : "A plugin for Minecraft towny"
 api-version : 1.17

@@ -19,6 +19,12 @@ ChatRoom
             remove <Room>: Remove certain ChatRoom."
 ```
 
+# Last Updates
+| date | version | update |
+| :----- | :----- | :----- |
+| 2022-3-5 | alpha 0.1 | project started |
+| | | /croom: creating, managing, listening and saying on such room |
+
 # License
 | License | case |
 | :------ | :------ |

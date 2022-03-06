@@ -10,12 +10,13 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 import com.ice.croom.plugin.Var;
+import com.ice.croom.util.Func;
 
 @SuppressWarnings("serial")
 public class PlayerChatData implements Serializable {
-	private String startPrefix = "<";
-	private String endPrefix = ">";
-	private String chatCnt = " ";
+	private String startPrefix = "&7";
+	private String endPrefix = "";
+	private String chatCnt = " :: ";
 	private boolean hasModifyPermission = false;
 	private String playerUUID;
 	public PlayerChatData(OfflinePlayer player) {
@@ -28,7 +29,7 @@ public class PlayerChatData implements Serializable {
 	public String getEndPrefix() { return endPrefix; }
 	public String getChatCnt() { return chatCnt; }
 	public String getPrefix() { return startPrefix + Bukkit.getOfflinePlayer(UUID.fromString(this.playerUUID)).getName() + endPrefix; }
-	public String getMessageForm(String message) { return startPrefix + Bukkit.getOfflinePlayer(UUID.fromString(this.playerUUID)).getName() + endPrefix + chatCnt + message; }
+	public String getMessageForm(String message) { return Func.putColor(startPrefix + Bukkit.getOfflinePlayer(UUID.fromString(this.playerUUID)).getName() + endPrefix + chatCnt + message); }
 	public boolean getModifyPermission() { return hasModifyPermission; }
 
 	public void setStartPrefix(String prefix) { this.startPrefix = prefix; }
@@ -47,6 +48,10 @@ public class PlayerChatData implements Serializable {
 			}
 		}
 	}
+	public static PlayerChatData getPlayerChatData(Player player) {
+		return Var.chatData.getData().get(player.getUniqueId().toString());
+	}
+	@Deprecated
 	public static String getPrefix(Player player) {
 		return Var.chatData.getData().get(player.getUniqueId().toString()).getPrefix();
 	}

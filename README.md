@@ -7,7 +7,7 @@ ChatRoom
 > 이 플러그인을 사용하는 것을 전적으로 추천합니다.  
 > **`단, 이 플러그인 또는 코드를 사용하려면 아레의 `[`License`](#license)`를 따라야 합니다.`**    
 
-# commands
+# Commands
 ```
 /croom [...]
         info: Prints plugin info message.

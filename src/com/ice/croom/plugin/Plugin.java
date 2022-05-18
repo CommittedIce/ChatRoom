@@ -146,7 +146,7 @@ public class Plugin extends JavaPlugin{
 	* @return A List of possible completions for the final argument, or null
 	*	 to default to the command executor
 	*/
-		public List<String> onTabComplete(CommandSender sender, Command cmd, String alias, String[] args){
+	public List<String> onTabComplete(CommandSender sender, Command cmd, String alias, String[] args){
 		boolean isPlayer = sender instanceof Player;
 		List<String> emptyList = new ArrayList<String>();
 		args = Arrays.stream(args).map(String::toLowerCase).toArray(String[]::new);

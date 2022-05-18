@@ -12,7 +12,6 @@ import com.ice.croom.chatdata.ChatRoom;
 import com.ice.croom.chatdata.PlayerChatData;
 import com.ice.croom.util.Func;
 
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TranslatableComponent;
 
 

@@ -146,59 +146,59 @@ public class Plugin extends JavaPlugin{
 	* @return A List of possible completions for the final argument, or null
 	*	 to default to the command executor
 	*/
-   public List<String> onTabComplete(CommandSender sender, Command cmd, String alias, String[] args){
-	   boolean isPlayer = sender instanceof Player;
-	   List<String> emptyList = new ArrayList<String>();
-	   args = Arrays.stream(args).map(String::toLowerCase).toArray(String[]::new);
-	   switch (cmd.getName()) {
-	   case "croom":
+		public List<String> onTabComplete(CommandSender sender, Command cmd, String alias, String[] args){
+		boolean isPlayer = sender instanceof Player;
+		List<String> emptyList = new ArrayList<String>();
+		args = Arrays.stream(args).map(String::toLowerCase).toArray(String[]::new);
+		switch (cmd.getName()) {
+		case "croom":
 
-		   //About console
-		   if (!isPlayer) {
-			   if (args.length == 1) {
-				   return Arrays.asList("info", "help");
-			   }
-			   return emptyList;
-		   }
+			//About console
+			if (!isPlayer) {
+				if (args.length == 1) {
+					return Arrays.asList("info", "help");
+				}
+				return emptyList;
+			}
 
 
-		   if (args.length == 1) {
-			   return Arrays.asList("listen", "say", "manage", "info", "help");//, "modify");
-		   } else if (args.length == 2) {
-			   if (args[0].equalsIgnoreCase("listen")) { return Arrays.asList("on", "off");
-			   } else if (args[0].equalsIgnoreCase("say")) {
-				   ChatRoom cr = Var.chattingroom.getData().get(((OfflinePlayer) sender).getUniqueId().toString());
-				   return Var.rooms.getData().values().stream()
-						   .filter((ChatRoom v) -> v.getIdentity() != cr.getIdentity())
-						   .map((ChatRoom v) -> v.getName())
-						   .collect(Collectors.toList());
-			   } else if (args[0].equalsIgnoreCase("manage")) {
-				   if (PlayerChatData.hasModifyPermission((Player) sender)) { return Arrays.asList("add", "modify", "remove"); }
-				   return Arrays.asList("modify", "remove");
-			   }
-			   return emptyList;
-		   } else if (args.length == 3) {
-			   if (args[0].equalsIgnoreCase("listen")) {
-				   if (!args[1].equalsIgnoreCase("on") && !args[1].equalsIgnoreCase("off")) {return emptyList;}
-				   OfflinePlayer ofp = (OfflinePlayer) sender;
-				   boolean ltype = !args[1].equalsIgnoreCase("on");
+			if (args.length == 1) {
+				return Arrays.asList("listen", "say", "manage", "info", "help");//, "modify");
+			} else if (args.length == 2) {
+				if (args[0].equalsIgnoreCase("listen")) { return Arrays.asList("on", "off");
+				} else if (args[0].equalsIgnoreCase("say")) {
+					ChatRoom cr = Var.chattingroom.getData().get(((OfflinePlayer) sender).getUniqueId().toString());
+					return Var.rooms.getData().values().stream()
+							.filter((ChatRoom v) -> v.getIdentity() != cr.getIdentity())
+							.map((ChatRoom v) -> v.getName())
+							.collect(Collectors.toList());
+				} else if (args[0].equalsIgnoreCase("manage")) {
+					if (PlayerChatData.hasModifyPermission((Player) sender)) { return Arrays.asList("add", "modify", "remove"); }
+					return Arrays.asList("modify", "remove");
+				}
+				return emptyList;
+			} else if (args.length == 3) {
+				if (args[0].equalsIgnoreCase("listen")) {
+					if (!args[1].equalsIgnoreCase("on") && !args[1].equalsIgnoreCase("off")) {return emptyList;}
+					OfflinePlayer ofp = (OfflinePlayer) sender;
+					boolean ltype = !args[1].equalsIgnoreCase("on");
 
-				   return Var.rooms.getData().values().stream()
-						   .filter((ChatRoom v) -> v.getListenPlayers().contains(ofp.getUniqueId().toString()) == ltype)
-						   .map((ChatRoom v) -> v.getName())
-						   .collect(Collectors.toList());
-			   } else if (args[0].equalsIgnoreCase("manage")) {
-				   if (args[1].equalsIgnoreCase("remove") || args[1].equalsIgnoreCase("modify")) {
-					   return Var.rooms.getData().values().stream()
-							    .filter((ChatRoom v) -> v.hasModifyPermission((OfflinePlayer) sender))
-							    .map((ChatRoom v) -> v.getName())
-							    .collect(Collectors.toList());
-				   }
-			   }
-			   return emptyList;
-		   }
-		   return emptyList;
-	   }
-	   return emptyList;
-   }
+					return Var.rooms.getData().values().stream()
+							.filter((ChatRoom v) -> v.getListenPlayers().contains(ofp.getUniqueId().toString()) == ltype)
+							.map((ChatRoom v) -> v.getName())
+							.collect(Collectors.toList());
+				} else if (args[0].equalsIgnoreCase("manage")) {
+					if (args[1].equalsIgnoreCase("remove") || args[1].equalsIgnoreCase("modify")) {
+						return Var.rooms.getData().values().stream()
+									.filter((ChatRoom v) -> v.hasModifyPermission((OfflinePlayer) sender))
+									.map((ChatRoom v) -> v.getName())
+									.collect(Collectors.toList());
+					}
+				}
+				return emptyList;
+			}
+			return emptyList;
+		}
+		return emptyList;
+	}
 }

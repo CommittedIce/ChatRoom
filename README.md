@@ -5,7 +5,7 @@ ChatRoom
 > 채팅 관리를 위한 마인크래프트 플러그인입니다.     
 > 채팅 관리로 인해 어려움을 겪고 있다면,    
 > 이 플러그인을 사용하는 것을 전적으로 추천합니다.  
-> **`단, 이 플러그인 또는 코드를 사용하려면 아레의 `[`License`](#license)`를 따라야 합니다.`**    
+> **`단, 이 플러그인을 사용하려면 아레의 `[`License`](#license)`를 따라야 합니다.`**    
 
 # Commands
 ```
@@ -28,4 +28,4 @@ ChatRoom
 
 # License
 이 저작물은 MIT라이선스에 따라서 사용할 수 있습니다.
-`https://github.com/CommittedIce/ChatRoom/new/master`
+[`바로가기 >>`](https://github.com/Ice-Bukkit/ChatRoom/blob/master/License)
